@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo 'nunca desista das coisa que faz voce sorrir!'
+read -p "Informe um número inteiro: " num1
+a=$(($num1 + 1))
+
+echo ${a}

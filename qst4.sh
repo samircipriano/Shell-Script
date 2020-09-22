@@ -1,17 +1,10 @@
 #!/bin/bash
 
-echo "Diretorio 1:"
-procurar=$(find ${HOME} -type d -name $1)
-cd ${procurar}
-ls | ls &> /tmp/que_lista_linda.txt
+arq1=$(find ${HOME} -type f -name $1 | wc -l)
+arq2=$(find ${HOME} -type f -name $2 | wc -l)
+arq3=$(find ${HOME} -type f -name $3 | wc -l)
 
-echo "Diretorio 2:"
-procurar=$(find ${HOME} -type d -name $2)
-cd ${procurar}
-ls | ls &> /tmp/que_lista_linda.txt
+soma=$(( ${arq1} + ${arq2} + ${arq3} ))
 
-echo "Diretorio 3:"
-procurar=$(find ${HOME} -type d -name $3)
-cd ${procurar}
-ls | ls &> /tmp/que_lista_linda.txt
-~  
+echo -e "Total de linhas: ${soma}"
+
